@@ -61,19 +61,15 @@ window.progressInstances[index].getValue();
 window.progressInstances[index].setValue(value);
 ```
 
-> toggleAnimation(isAnimated) - включает анимацию при которой дуга постепенно заполняет frame и удаляется с конца, цикл длится пока не получит состояние false. isAnimated принимает булевое значение (пустая строка ''. 0 и пустой аргумент будет принят за false).
+> toggleAnimation(isAnimated) - включает анимацию при которой дуга вращается по часовой стрелке. isAnimated принимает булевое значение (пустая строка ''. 0 и пустой аргумент будет принят за false).
 
 ```js
 window.progressInstances[index].toggleAnimation(isAnimated);
 ```
 
-> toggleRotation(isRotated) - включает дополнительную анимацию, которая добавляет вращение самой дуги по часовой стрелке. isRotated принимает булевое значение (пустая строка ''. 0 и пустой аргумент будет принят за false), но данный метод работает только при включенной анимации (последнее состояние toggleAnimation было true)
+> ~~toggleRotation(isRotated) - включает дополнительную анимацию, которая добавляет вращение самой дуги по часовой стрелке. isRotated принимает булевое значение (пустая строка ''. 0 и пустой аргумент будет принят за false), но данный метод работает только при включенной анимации (последнее состояние toggleAnimation было true)~~
 
-```js
-window.progressInstances[index].toggleRotation(isRotated);
-```
-
-> toggleHiding(isHidden) - скрывает элемент frame, а также отключает элементы управления Value, Animate, Rotate. isHidden принимает булевое значение (пустая строка ''. 0 и пустой аргумент будет принят за false).
+> toggleHiding(isHidden) - скрывает элемент frame, а также отключает элементы управления Value, Animate. isHidden принимает булевое значение (пустая строка ''. 0 и пустой аргумент будет принят за false).
 
 ```js
 window.progressInstances[index].toggleHiding(isHidden);
@@ -85,12 +81,11 @@ window.progressInstances[index].toggleHiding(isHidden);
 window.progressInstances[index].reset();
 ```
 
-Блок Progress имеет 4 элемента ручного управления и frame в виде круга для визуализации:
+Блок Progress имеет 3 элемента ручного управления и frame в виде круга для визуализации:
 
 1. Value - Поле для ввода числового значения в диапазоне 0-100, регулирующее прогресс заполнения дуги в процентах
-2. Animate - Переключатель отвечающией за анимацию заполнения дуги
-3. Rotate - Переключатель (работает только при включенном Animate), который добавляет вращение по часовой стрелке для дуги Progress
-4. Hide - Переключатель отвечающие за скрывание элемента frame в блоке Progress
+2. Animate - Переключатель отвечающией за вращение по часовой стрелке для дуги Progress
+3. Hide - Переключатель отвечающие за скрывание элемента frame в блоке Progress
 
 ![Пример блока Progress](/example.jpg)
 
