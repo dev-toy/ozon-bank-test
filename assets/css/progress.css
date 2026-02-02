@@ -45,14 +45,12 @@
 }
 
 .progress-circle__bg {
-  r: 45;
   fill: none;
   stroke: var(--progress-color-dark);
   stroke-width: 10;
 }
 
 .progress-circle__arc {
-  r: 45;
   fill: none;
   stroke: var(--progress-color-accent);
   stroke-width: 10;
