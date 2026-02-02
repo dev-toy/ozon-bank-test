@@ -111,7 +111,7 @@ progressElements.forEach((element, index) => {
 При желании вы можете настроить размер frame с отображением результатов:
 
 В файле [progress.css](/assets/css/progress.css "перейти к файлу")
-вы можете увеличить или уменьшить размеры `width` и `height` контейнера `.progress-circle`, а также у свойств `.progress-circle__bg` и `.progress-circle__arc` вы можете изменить ширину дуги `stroke-width`.
+вы можете увеличить или уменьшить размеры `width` и `height` контейнера `.progress-circle`, а также у свойств `.progress-circle__bg` и `.progress-circle__arc` вы можете изменить ширину `stroke-width` и радиус `r` дуги.
 
 ```css
 .progress-circle {
@@ -120,10 +120,12 @@ progressElements.forEach((element, index) => {
 }
 
 .progress-circle__bg {
+  r: 45;
   stroke-width: 10;
 }
 
 .progress-circle__arc {
+  r: 45;
   stroke-width: 10;
 }
 ```
